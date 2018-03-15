@@ -2,12 +2,10 @@
 
 namespace App\Providers;
 
-use EasyWeChat\Factory;
 use Illuminate\Support\ServiceProvider;
 
-class WechatServiceProvider extends ServiceProvider
+class ModelServiceProvider extends ServiceProvider
 {
-    
     //开启延时加载
     protected $defer = true;
     
@@ -28,13 +26,8 @@ class WechatServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //微信服务提供者，单例
-        $this->app->singleton("Wechat",function(){
-            $config = config('wechat');
-            $app = Factory::officialAccount($config);
-            
-            return $app;
-        });
+        // 用户模型
+        $this->app->bind('UsersModel',\App\Model\Users::class);
     }
     
     /**
@@ -43,8 +36,8 @@ class WechatServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            //微信服务提供者
-            "Wechat",
+            // 用户模型
+            "UsersModel",
         ];
     }
 }

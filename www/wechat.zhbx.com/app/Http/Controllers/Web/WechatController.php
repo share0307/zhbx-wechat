@@ -30,7 +30,12 @@ class WechatController extends WebBaseController{
     {
         $target_url = $request->get('target_url',url('/'));
     
-        $wechat_oauth_business->getWeixinUserInfo();
+        $code = $request->get('code');
+        
+        $wechat_user_data = $wechat_oauth_business->getWeixinUserInfo($code);
+        
+        //同步用户数据
+        dd($wechat_user_data);
         
         return redirect($target_url);
     }

@@ -19,7 +19,7 @@
 //});
 
 //微信相关
-Route::middleware(['CheckWxBrowser',])->prefix('wechat')->group(function() {
+Route::middleware([])->prefix('wechat')->group(function() {
     
     //微信授权后的跳转页面
     Route::get('/redirect','WechatController@OauthRedirect');

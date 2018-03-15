@@ -3,6 +3,7 @@
 namespace App\Http\Business;
 
 use App\Exceptions\JsonException;
+use Overtrue\Socialite\AuthorizeFailedException;
 
 class WechatOauthBusiness extends BusinessBase{
     
@@ -40,15 +41,26 @@ class WechatOauthBusiness extends BusinessBase{
      * 授权登录后，获取微信用户数据
      * @author  jianwei
      */
-    public function getWeixinUserInfo()
+    public function getWeixinUserInfo($code)
     {
+        if(empty($code)){
+            throw new JsonException(10000);
+        }
+    
+//        $wx_user_arr = array();
+        
         $Wechat = app('Wechat');
         $oauth = $Wechat->oauth;
     
-        $wx_user = $oauth->user();
+        try {
+            $wx_user = $oauth->user();
+        }catch (AuthorizeFailedException $e){
+            throw new JsonException(20001);
+        }
+    
+        $wx_user_arr = $wx_user->toArray();
         
-        var_dump($wx_user);
-        exit();
+        return $wx_user_arr;
     }
     
     

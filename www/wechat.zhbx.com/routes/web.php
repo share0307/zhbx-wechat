@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function (\Illuminate\Http\Request $request) {
-    if($request->has('echostr')){
-        return $request->get('echostr');
-    }
-    return view('welcome');
+//Route::get('/', function (\Illuminate\Http\Request $request) {
+//    if($request->has('echostr')){
+//        return $request->get('echostr');
+//    }
+//    return view('welcome');
+//});
+
+Route::middleware([])->group(function(){
+
 });

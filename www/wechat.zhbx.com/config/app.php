@@ -160,6 +160,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //微信服务提供者
+        App\Providers\WechatServiceProvider::class,
+        
     ],
 
     /*

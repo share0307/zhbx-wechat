@@ -69,7 +69,6 @@ class CheckWxLogin
                 
                 return $oauth->redirect($callback_fullurl);
             }
-    
         }
         
         return null;

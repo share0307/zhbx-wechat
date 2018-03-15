@@ -27,7 +27,7 @@ class UserBusiness extends BusinessBase{
      */
     function SyncUserInfoToDb(array $user_data)
     {
-        if(!isset($user_data['openid'])){
+        if(!isset($user_data['id'])){
             throw new JsonException(10000);
         }
         

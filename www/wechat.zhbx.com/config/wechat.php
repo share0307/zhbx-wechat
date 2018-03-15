@@ -9,6 +9,6 @@ return array(
     
     'log' => [
         'level' => 'debug',
-        'file' => storage_path('/wechat/wechat.log'),
+        'file' => storage_path('logs/wechat.log'),
     ],
 );

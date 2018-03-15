@@ -2,3 +2,7 @@
 [2018-03-15 03:49:28] NULL.DEBUG: Server response created: {"content":"a"} 
 [2018-03-15 03:49:59] NULL.DEBUG: Request received: {"method":"GET","uri":"http://wechat.zhbx.net/?echostr=a","content-type":null,"content":""} 
 [2018-03-15 03:49:59] NULL.DEBUG: Server response created: {"content":"a"} 
+[2018-03-15 04:03:05] NULL.DEBUG: Request received: {"method":"GET","uri":"http://wechat.zhbx.net/?echostr=a","content-type":null,"content":""} 
+[2018-03-15 04:03:05] NULL.DEBUG: Server response created: {"content":"a"} 
+[2018-03-15 04:03:09] NULL.DEBUG: Request received: {"method":"GET","uri":"http://wechat.zhbx.net/","content-type":null,"content":""} 
+[2018-03-15 04:03:09] NULL.DEBUG: Server response created: {"content":"success"} 

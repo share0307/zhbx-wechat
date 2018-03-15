@@ -28,7 +28,7 @@ class WechatController extends WebBaseController{
      */
     public function OauthRedirect(Request $request, WechatOauthBusiness $wechat_oauth_business)
     {
-        $target_url = $request->get('target_url',action('/'));
+        $target_url = $request->get('target_url',url('/'));
     
         $wechat_oauth_business->getWeixinUserInfo();
         

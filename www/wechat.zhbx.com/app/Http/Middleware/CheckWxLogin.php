@@ -55,8 +55,8 @@ class CheckWxLogin
                 //跳转到登录页面
                 $oauth = app('Wechat')->oauth;
                 //需要用户授权取得详细信息
-                //$oauth->scopes(['snsapi_userinfo']);
-                $oauth->scopes(['snsapi_base']);
+                $oauth->scopes(['snsapi_userinfo']);
+//                $oauth->scopes(['snsapi_base']);
                 //回调地址
                 //附带的参数
                 $oauth->setRequest($request);

@@ -27,7 +27,7 @@ class WechatController extends WebBaseController{
      */
     public function OauthRedirect(Request $request)
     {
-        var_dump($request);
+        var_dump($request->input());
     }
     
 }

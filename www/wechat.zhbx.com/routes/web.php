@@ -18,18 +18,19 @@
 //    return view('welcome');
 //});
 
+//微信相关
+Route::middleware(['CheckWxBrowser',])->prefix('wechat')->group(function() {
+    
+    //微信授权后的跳转页面
+    Route::get('/redirect','WechatController@OauthRedirect');
+});
+
+//默认
 Route::middleware(['CheckWxBrowser','CheckWxLogin',])->group(function(){
     
     //验证微信服务器
 //    Route::get('/',"WechatController@AuthEchostr");
     Route::get('/','HomeController@index');
     
-});
-
-//微信相关
-Route::middleware(['CheckWxBrowser',])->prefix('wechat')->group(function() {
-    
-    //微信授权后的跳转页面
-    Route::get('/redirect','WechatController@OauthRedirect');
 });
 

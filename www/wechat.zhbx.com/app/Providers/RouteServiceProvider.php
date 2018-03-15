@@ -51,7 +51,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        $namespace = $this->namespace.'\Api';
+        $namespace = $this->namespace.'\Web';
     
         Route::middleware('web')
              ->namespace($namespace)

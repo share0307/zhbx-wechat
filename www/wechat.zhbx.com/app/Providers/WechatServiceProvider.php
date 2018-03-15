@@ -31,7 +31,6 @@ class WechatServiceProvider extends ServiceProvider
         //微信服务提供者，单例
         $this->app->singleton("Wechat",function(){
             $config = config('wechat');
-            print_r($config);
             $app = Factory::officialAccount($config);
             
             return $app;

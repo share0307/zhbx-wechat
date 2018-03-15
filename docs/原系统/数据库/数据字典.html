@@ -1,0 +1,5099 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://localhost/dict.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ZHBX数据库数据字典</title>
+<style>
+body, td, th { font-family: "微软雅黑"; font-size: 14px; }
+.warp{margin:auto; width:900px;}
+.warp h3{margin:0px; padding:0px; line-height:30px; margin-top:10px;}
+table { border-collapse: collapse; border: 1px solid #CCC; background: #efefef; }
+table th { text-align: left; font-weight: bold; height: 26px; line-height: 26px; font-size: 14px; text-align:center; border: 1px solid #CCC; padding:5px;}
+table td { height: 20px; font-size: 14px; border: 1px solid #CCC; background-color: #fff; padding:5px;}
+.c1 { width: 120px; }
+.c2 { width: 120px; }
+.c3 { width: 150px; }
+.c4 { width: 80px; text-align:center;}
+.c5 { width: 80px; text-align:center;}
+.c6 { width: 270px; }
+</style>
+</head>
+<body>
+<div class="warp">
+    <h1 style="text-align:center;">ZHBX数据库数据字典</h1>
+  <h3>1、地区表  （area）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11) unsigned</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">parentId</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">char(20)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>2、Banner表  （banner）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11) unsigned</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>3、Banner轮播图表  （banner_item）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11) unsigned</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">bannerid</td>
+              <td class="c2">int(11) unsigned</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">title</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">link</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">img</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">sn</td>
+              <td class="c2">smallint(5)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">modifytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>4、购物车商品表（二期后弃用）  （cart）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">购物车id</td>
+          </tr>
+          <tr>
+              <td class="c1">goodsid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">商品id</td>
+          </tr>
+          <tr>
+              <td class="c1">goodstype</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">商品类型 COURSE</td>
+          </tr>
+          <tr>
+              <td class="c1">goodsnumber</td>
+              <td class="c2">smallint(6)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">商品数量</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">modifytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">编辑时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>5、课程表  （course）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">catid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程分类id</td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">tinyint(2)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程类型，1-H5，2-视频</td>
+          </tr>
+          <tr>
+              <td class="c1">cname</td>
+              <td class="c2">varchar(64)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程名称</td>
+          </tr>
+          <tr>
+              <td class="c1">cthumb</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">缩略图</td>
+          </tr>
+          <tr>
+              <td class="c1">coursewarepath</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课件地址</td>
+          </tr>
+          <tr>
+              <td class="c1">originalprice</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">retailprice</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">零售价</td>
+          </tr>
+          <tr>
+              <td class="c1">tradeprice</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">批发价</td>
+          </tr>
+          <tr>
+              <td class="c1">content</td>
+              <td class="c2">text</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程详情-富媒体</td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程简介</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用，2-已删除</td>
+          </tr>
+          <tr>
+              <td class="c1">sn</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">operator</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建者id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">modifytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>6、课程分类表
+  （course_category）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">pid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">上级id</td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">avatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">图像</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用，2-已删除</td>
+          </tr>
+          <tr>
+              <td class="c1">isrecommend</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推荐标志，0-N，1-Y</td>
+          </tr>
+          <tr>
+              <td class="c1">isallowdel</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">是否允许删除，0-N,1-Y</td>
+          </tr>
+          <tr>
+              <td class="c1">sn</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">序号</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>7、课程收藏表  （course_collecting）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6">id</td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>8、课程评论表  （course_comment）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户ID</td>
+          </tr>
+          <tr>
+              <td class="c1">content</td>
+              <td class="c2">varchar(1000)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">评论内容</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态标志，0-未审核，1-已审核</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>9、课程浏览历史记录表  （course_history）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6">id</td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>10、课程元数据表
+  （course_meta）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">key</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键名</td>
+          </tr>
+          <tr>
+              <td class="c1">value</td>
+              <td class="c2">varchar(1024)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键值</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>11、课程与价格规则的匹配表，用于描述哪些课程  （course_points_options）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">pooid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">价格规则表id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>12、课程与价格规则的匹配表，用于描述哪些课程  （course_price_options）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">proid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">价格规则表id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>13、课程数据表  （course_report）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">totalpurchase</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">购买总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalview</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalshare</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">分享总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalclick</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">点击总数</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>14、课程标签表  （course_tags）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">tagid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">标签id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>15、客户表  （customer）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">客户类型，1-保险公司，2-保险代理，3-第三方保险机构</td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">province</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">省</td>
+          </tr>
+          <tr>
+              <td class="c1">city</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">市</td>
+          </tr>
+          <tr>
+              <td class="c1">district</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">区</td>
+          </tr>
+          <tr>
+              <td class="c1">address</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">地址</td>
+          </tr>
+          <tr>
+              <td class="c1">tel</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">电话</td>
+          </tr>
+          <tr>
+              <td class="c1">linkman</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">联系人</td>
+          </tr>
+          <tr>
+              <td class="c1">industry</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">行业</td>
+          </tr>
+          <tr>
+              <td class="c1">business</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">业务</td>
+          </tr>
+          <tr>
+              <td class="c1">website</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">网址</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_title</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_code</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">税号</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_linkman</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">联系人</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_tel</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">联系电话</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_address</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">地址</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_bankname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">开户银行</td>
+          </tr>
+          <tr>
+              <td class="c1">invoice_bankaccount</td>
+              <td class="c2">varchar(50)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">银行账户</td>
+          </tr>
+          <tr>
+              <td class="c1">ownerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">拥有者id</td>
+          </tr>
+          <tr>
+              <td class="c1">totalusers</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总人数</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用，2-已删除</td>
+          </tr>
+          <tr>
+              <td class="c1">operator</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建者</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">modifytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">修改时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>16、课程与价格规则的匹配表，用于描述哪些课程  （customer_points_options）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cusid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">pooid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">价格规则表id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>17、课程与价格规则的匹配表，用于描述哪些课程  （customer_price_options）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cusid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">proid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">价格规则表id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>18、客户用户表  （customer_user）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cusid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">客户id</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">rolecode</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色code</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>19、系统模块表  （module）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">系统模块名称</td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">系统模块描述</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>20、通知表  （notify）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">notifytype</td>
+              <td class="c2">varchar(10)</td>
+              <td class="c3">system</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">类型</td>
+          </tr>
+          <tr>
+              <td class="c1">sender</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">发送者，0-system</td>
+          </tr>
+          <tr>
+              <td class="c1">receiver</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">接收者，0-全体</td>
+          </tr>
+          <tr>
+              <td class="c1">title</td>
+              <td class="c2">varchar(64)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">通知名</td>
+          </tr>
+          <tr>
+              <td class="c1">content</td>
+              <td class="c2">varchar(1024)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">内容</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未读，1-已读</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">expiretime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">失效时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>21、订单表  （order）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号，AAyyyymmddxxxxxx</td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">char(2)</td>
+              <td class="c3">10</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单类型，10-充值， 11-推广员权益充值，20-课程，21-单买课程，22-多买课程</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">nickname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户昵称</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单状态，0-待付款，1-已完成，2-已取消，3-处理中，4-已付款</td>
+          </tr>
+          <tr>
+              <td class="c1">totalcourses</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总课程数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalpackages</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总份数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalamount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总金额</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">paytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">付款时间</td>
+          </tr>
+          <tr>
+              <td class="c1">deleted</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">是否已删除</td>
+          </tr>
+          <tr>
+              <td class="c1">deletetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">删除时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>22、订单提成表  （order_commission）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">orderid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单id</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号</td>
+          </tr>
+          <tr>
+              <td class="c1">orderamount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单金额</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单时间</td>
+          </tr>
+          <tr>
+              <td class="c1">forwarderid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发员ID</td>
+          </tr>
+          <tr>
+              <td class="c1">forward_rate</td>
+              <td class="c2">tinyint(2)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发提成比例,0-100</td>
+          </tr>
+          <tr>
+              <td class="c1">forward_amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发提成</td>
+          </tr>
+          <tr>
+              <td class="c1">forward_calculatetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发提成的计算时间</td>
+          </tr>
+          <tr>
+              <td class="c1">forward_receiptstatus</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发提成的入账状态，1-已入账，0-未入账</td>
+          </tr>
+          <tr>
+              <td class="c1">forward_receipttime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发提成的入账时间</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">promote_rate</td>
+              <td class="c2">tinyint(2)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广提成比例,0-100</td>
+          </tr>
+          <tr>
+              <td class="c1">promote_amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广提成</td>
+          </tr>
+          <tr>
+              <td class="c1">promote_calculatetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广提成的计算时间</td>
+          </tr>
+          <tr>
+              <td class="c1">promote_receiptstatus</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广提成的入账状态，1-已入账，0-未入账</td>
+          </tr>
+          <tr>
+              <td class="c1">promote_receipttime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广提成的入账时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>23、订单明细  （order_details）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">oid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单id</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号，AAyyyymmddxxxxxx</td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">cname</td>
+              <td class="c2">varchar(64)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程名称</td>
+          </tr>
+          <tr>
+              <td class="c1">cthumb</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程缩略图</td>
+          </tr>
+          <tr>
+              <td class="c1">price</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">售价</td>
+          </tr>
+          <tr>
+              <td class="c1">packages</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">件数</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">金额总数</td>
+          </tr>
+          <tr>
+              <td class="c1">processed</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">是否已处理 0-否 1-是</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>24、订单额外属性  （order_meta）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">oid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单id</td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键名</td>
+          </tr>
+          <tr>
+              <td class="c1">key</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键</td>
+          </tr>
+          <tr>
+              <td class="c1">value</td>
+              <td class="c2">varchar(1024)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键值</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>25、支付单  （order_pay）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11) unsigned</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">payment</td>
+              <td class="c2">varchar(10)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">orderid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">openid</td>
+              <td class="c2">varchar(128)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">out_trade_no</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">transaction_id</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">body</td>
+              <td class="c2">varchar(128)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">attach</td>
+              <td class="c2">varchar(128)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">trade_type</td>
+              <td class="c2">varchar(16)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">trade_state</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">total_fee</td>
+              <td class="c2">int(9)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">paytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>26、支付方式  （payment）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(50)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">支付方式名称</td>
+          </tr>
+          <tr>
+              <td class="c1">code</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">支付方式代码</td>
+          </tr>
+          <tr>
+              <td class="c1">fee</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">费率</td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述</td>
+          </tr>
+          <tr>
+              <td class="c1">listorder</td>
+              <td class="c2">smallint(5)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">排列顺序</td>
+          </tr>
+          <tr>
+              <td class="c1">config</td>
+              <td class="c2">varchar(3000)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">支付配置</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态标志，0-未启用，1-已启用</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>27、推广员表  （promoter）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">nickname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">promotecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广代码</td>
+          </tr>
+          <tr>
+              <td class="c1">operator</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作员id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">加入时间</td>
+          </tr>
+          <tr>
+              <td class="c1">customerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">客户id</td>
+          </tr>
+          <tr>
+              <td class="c1">customername</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">客户名称</td>
+          </tr>
+          <tr>
+              <td class="c1">totalPeople</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广总人数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalRechargeAmount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">充值总金额</td>
+          </tr>
+          <tr>
+              <td class="c1">totalCommission</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">佣金总金额</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用</td>
+          </tr>
+          <tr>
+              <td class="c1">bankname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">开户行</td>
+          </tr>
+          <tr>
+              <td class="c1">bankaccount</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">银行卡号</td>
+          </tr>
+          <tr>
+              <td class="c1">cardholder</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">持卡人</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>28、推广员账户表  （promoter_account）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">avatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">头像地址</td>
+          </tr>
+          <tr>
+              <td class="c1">nickname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户昵称</td>
+          </tr>
+          <tr>
+              <td class="c1">amountCurrent</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">当前金额</td>
+          </tr>
+          <tr>
+              <td class="c1">amountBlock</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">冻结金额</td>
+          </tr>
+          <tr>
+              <td class="c1">totalAmountDebit</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">借方累计金额</td>
+          </tr>
+          <tr>
+              <td class="c1">totalAmountCredit</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">贷方累计金额</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>29、推广员账户记账表  （promoter_account_tally）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">tallydate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账日期</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">accountType</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">账户类型，1-金额，2-积分</td>
+          </tr>
+          <tr>
+              <td class="c1">tallyType</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账类型，1-借，2-贷</td>
+          </tr>
+          <tr>
+              <td class="c1">subject</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账科目</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账数</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账时间</td>
+          </tr>
+          <tr>
+              <td class="c1">receiptstatus</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">入账状态，1-已入账，0-未入账</td>
+          </tr>
+          <tr>
+              <td class="c1">receipttime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">入账时间</td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>30、推广员提现申请表  （promoter_exchange_apply）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">提现时间</td>
+          </tr>
+          <tr>
+              <td class="c1">payment</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">支付方式，1-现金，2-支付宝，3-微信</td>
+          </tr>
+          <tr>
+              <td class="c1">account</td>
+              <td class="c2">varchar(64)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">账号</td>
+          </tr>
+          <tr>
+              <td class="c1">accountname</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">账户名</td>
+          </tr>
+          <tr>
+              <td class="c1">bank</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">银行名称</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">金额</td>
+          </tr>
+          <tr>
+              <td class="c1">receiptstatus</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">入账状态，0-未确认，1-已确认，2-已拒绝</td>
+          </tr>
+          <tr>
+              <td class="c1">receipttime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">入账时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>31、推广员提现审核表  （promoter_exchange_audit）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">peaid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员提现申请id</td>
+          </tr>
+          <tr>
+              <td class="c1">pass1</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">通过标志1，0-未通过，1-已通过</td>
+          </tr>
+          <tr>
+              <td class="c1">desc1</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述1</td>
+          </tr>
+          <tr>
+              <td class="c1">passtime1</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">处理时间1</td>
+          </tr>
+          <tr>
+              <td class="c1">operator1</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作员1</td>
+          </tr>
+          <tr>
+              <td class="c1">pass2</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">通过标志2，0-未通过，1-已通过</td>
+          </tr>
+          <tr>
+              <td class="c1">desc2</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述2</td>
+          </tr>
+          <tr>
+              <td class="c1">passtime2</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">处理时间2</td>
+          </tr>
+          <tr>
+              <td class="c1">operator2</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作员2</td>
+          </tr>
+          <tr>
+              <td class="c1">pass3</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">通过标志3，0-未通过，1-已通过</td>
+          </tr>
+          <tr>
+              <td class="c1">desc3</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述3</td>
+          </tr>
+          <tr>
+              <td class="c1">passtime3</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">处理时间3</td>
+          </tr>
+          <tr>
+              <td class="c1">operator3</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作员3</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>32、推广充值码（二期后弃用）  （promoter_recharge_code）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称，如xxx充值码100元送30元</td>
+          </tr>
+          <tr>
+              <td class="c1">rechargecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id，如果为0，则为系统模板</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">startdate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">开始日期</td>
+          </tr>
+          <tr>
+              <td class="c1">enddate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">结束日期</td>
+          </tr>
+          <tr>
+              <td class="c1">days</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">有效的天数</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未生效，1-已生效，2-已失效</td>
+          </tr>
+          <tr>
+              <td class="c1">amountRecharge</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">充值金额</td>
+          </tr>
+          <tr>
+              <td class="c1">amountPresent</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">赠送金额</td>
+          </tr>
+          <tr>
+              <td class="c1">quantity</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">数量</td>
+          </tr>
+          <tr>
+              <td class="c1">uselimit</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用限制，1人1码，1-Y，0-N</td>
+          </tr>
+          <tr>
+              <td class="c1">codetype</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">2</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">码类型，1-一次性码，2-通用码</td>
+          </tr>
+          <tr>
+              <td class="c1">totalused</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总使用数</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>33、推广充值记录表（二期后弃用）  （promoter_recharge_records）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rechargecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用人id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用时间</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号，AAyyyymmddxxxxxx</td>
+          </tr>
+          <tr>
+              <td class="c1">orderamount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单金额</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>34、推广员权益表（二期后弃用）  （promoter_rights）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">rightcode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益代码，RECHARGE-充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">rightname</td>
+              <td class="c2">varchar(50)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">rightvalue</td>
+              <td class="c2">mediumtext</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">值</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>35、推广员权益项定义表  （promoter_rights_item）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rightcode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益类型代码</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">itemid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益项id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>36、推广权益充值码设置  （promoter_rights_recharge）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rightcode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益类型代码</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id，如果为0，则为系统模板</td>
+          </tr>
+          <tr>
+              <td class="c1">rechargecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">startdate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">开始日期</td>
+          </tr>
+          <tr>
+              <td class="c1">enddate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">结束日期</td>
+          </tr>
+          <tr>
+              <td class="c1">days</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">有效的天数</td>
+          </tr>
+          <tr>
+              <td class="c1">quantity</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">数量</td>
+          </tr>
+          <tr>
+              <td class="c1">uselimit</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用限制，1人1码，1-Y，0-N</td>
+          </tr>
+          <tr>
+              <td class="c1">codetype</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">2</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">码类型，1-一次性码，2-通用码</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未生效，1-已生效，2-已失效</td>
+          </tr>
+          <tr>
+              <td class="c1">totalused</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总使用数</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>37、推广充值记录表  （promoter_rights_recharge_record）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rechargecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">rightitemid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益项id</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用人id</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号，AAyyyymmddxxxxxx</td>
+          </tr>
+          <tr>
+              <td class="c1">orderamount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单金额</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>38、推广员用户表  （promoter_user）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">promotername</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员昵称</td>
+          </tr>
+          <tr>
+              <td class="c1">promoteravatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广人头像</td>
+          </tr>
+          <tr>
+              <td class="c1">forwarderid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发人ID</td>
+          </tr>
+          <tr>
+              <td class="c1">forwardername</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发人昵称</td>
+          </tr>
+          <tr>
+              <td class="c1">forwarderavatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发人头像</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">被推广人ID</td>
+          </tr>
+          <tr>
+              <td class="c1">nickname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">被推广人昵称</td>
+          </tr>
+          <tr>
+              <td class="c1">avatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">被推广人头像</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">加入时间</td>
+          </tr>
+          <tr>
+              <td class="c1">tier</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">被推广人的推广层级，1-4级</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>39、充值批次表  （recharge_batch）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">batchno</td>
+              <td class="c2">char(10)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">批次号yymmddxxxx</td>
+          </tr>
+          <tr>
+              <td class="c1">operator</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作员id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">planstartdate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">计划开始日期</td>
+          </tr>
+          <tr>
+              <td class="c1">planenddate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">计划结束日期</td>
+          </tr>
+          <tr>
+              <td class="c1">factstartdate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">实际开始日期</td>
+          </tr>
+          <tr>
+              <td class="c1">factenddate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">实际结束日期</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未生成码库，1-未生效，2-已生效，3-已失效</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">金额</td>
+          </tr>
+          <tr>
+              <td class="c1">quantity</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">数量</td>
+          </tr>
+          <tr>
+              <td class="c1">uselimit</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用限制，1人1码，1-Y，0-N</td>
+          </tr>
+          <tr>
+              <td class="c1">codetype</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">码类型，1-一次性码，2-通用码</td>
+          </tr>
+          <tr>
+              <td class="c1">customerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">客户id</td>
+          </tr>
+          <tr>
+              <td class="c1">customername</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">客户名</td>
+          </tr>
+          <tr>
+              <td class="c1">totalused</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">已使用总数</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>40、充值码库  （recharge_batch_code）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">batchno</td>
+              <td class="c2">char(10)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">批次号yymmddxxxx</td>
+          </tr>
+          <tr>
+              <td class="c1">rechargecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-已使用，0-未使用，3-已失效</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>41、充值码使用记录表  （recharge_code_records）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">batchno</td>
+              <td class="c2">char(10)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">充值码批次号</td>
+          </tr>
+          <tr>
+              <td class="c1">rechargecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">充值码</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用者id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用时间</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号</td>
+          </tr>
+          <tr>
+              <td class="c1">orderamount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单金额</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>42、充值设置表  （recharge_options）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">thumb</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">amountRecharge</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">充值金额</td>
+          </tr>
+          <tr>
+              <td class="c1">amountPresent</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">赠送金额</td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用</td>
+          </tr>
+          <tr>
+              <td class="c1">operator</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作人id</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>43、权益定义表  （rights）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rightcode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益类型码，如recharge-充值</td>
+          </tr>
+          <tr>
+              <td class="c1">rightname</td>
+              <td class="c2">varchar(50)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益名称</td>
+          </tr>
+          <tr>
+              <td class="c1">rightvalue</td>
+              <td class="c2">varchar(2048)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益值，用于定义特定的权益参数，不同的权益有不同的参数</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>44、权益项定义表  （rights_item）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rightid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益id</td>
+          </tr>
+          <tr>
+              <td class="c1">rightcode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益类型码，如recharge-充值</td>
+          </tr>
+          <tr>
+              <td class="c1">itemname</td>
+              <td class="c2">varchar(50)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益项名称</td>
+          </tr>
+          <tr>
+              <td class="c1">itemthumb</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">itemvalue</td>
+              <td class="c2">varchar(2048)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益项值</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>45、角色表  （role）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">rolecode</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色代码</td>
+          </tr>
+          <tr>
+              <td class="c1">rolename</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色名称</td>
+          </tr>
+          <tr>
+              <td class="c1">roletype</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色类型</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态标志，1-启用，0-禁用</td>
+          </tr>
+          <tr>
+              <td class="c1">moduleid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">系统模块id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>46、角色权限关系表  （role_rule）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">roleid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色id</td>
+          </tr>
+          <tr>
+              <td class="c1">ruleid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权限id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>47、用户角色表  （role_user）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">roleid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色id</td>
+          </tr>
+          <tr>
+              <td class="c1">code</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">角色code</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>48、权限表  （rule）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">类型，router-路由，api-api</td>
+          </tr>
+          <tr>
+              <td class="c1">action</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">行为</td>
+          </tr>
+          <tr>
+              <td class="c1">method</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">方法</td>
+          </tr>
+          <tr>
+              <td class="c1">param</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">参数</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用</td>
+          </tr>
+          <tr>
+              <td class="c1">moduleid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">系统模块id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>49、短id  （shortid）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">course, courseware</td>
+          </tr>
+          <tr>
+              <td class="c1">value</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">expiretime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>50、日志表  （syslog）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">operator</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作员</td>
+          </tr>
+          <tr>
+              <td class="c1">objectid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">对象id</td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">日志类型</td>
+          </tr>
+          <tr>
+              <td class="c1">content</td>
+              <td class="c2">text</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">日志内容</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">操作时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>51、系统选项  （sysoptions）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(50)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">value</td>
+              <td class="c2">mediumtext</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">isautoload</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">0-N，1-Y</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>52、标签表  （tags）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">标签名</td>
+          </tr>
+          <tr>
+              <td class="c1">sn</td>
+              <td class="c2">smallint(3)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">顺序号，最大2位数,01-99</td>
+          </tr>
+          <tr>
+              <td class="c1">ishomepage</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">首页标志,0-N,1-Y</td>
+          </tr>
+          <tr>
+              <td class="c1">isrecommend</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推荐标志,0-N,1-Y</td>
+          </tr>
+          <tr>
+              <td class="c1">isallowdel</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">是否允许删除标志,0-N,1-Y</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>53、VIEW  （trans_course_rights_view）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">rightscode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程权益码</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未使用，1-已使用，2-已失效，3-已换回</td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">int(4)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">expiretime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">buyerid</td>
+              <td class="c2">bigint(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号</td>
+          </tr>
+          <tr>
+              <td class="c1">price</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单价格</td>
+          </tr>
+          <tr>
+              <td class="c1">ownerid</td>
+              <td class="c2">bigint(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">owntime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">viewerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">viewtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用时间</td>
+          </tr>
+          <tr>
+              <td class="c1">sharetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">receiverid</td>
+              <td class="c2">bigint(20)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">receivetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>54、用户表  （user）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">login</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">登录名</td>
+          </tr>
+          <tr>
+              <td class="c1">pwd</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">密码，md5</td>
+          </tr>
+          <tr>
+              <td class="c1">nickname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">avatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">头像地址</td>
+          </tr>
+          <tr>
+              <td class="c1">email</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">email</td>
+          </tr>
+          <tr>
+              <td class="c1">mobile</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">手机号码</td>
+          </tr>
+          <tr>
+              <td class="c1">qq</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">QQ号</td>
+          </tr>
+          <tr>
+              <td class="c1">wxid</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">微信openid</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-启用，0-禁用，2-已删除</td>
+          </tr>
+          <tr>
+              <td class="c1">lastip</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">最后登录ip</td>
+          </tr>
+          <tr>
+              <td class="c1">lasttime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">最后登录时间</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">modifytime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">更新时间</td>
+          </tr>
+          <tr>
+              <td class="c1">login_status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">登录状态，0-未登录，1-已登录</td>
+          </tr>
+          <tr>
+              <td class="c1">hits</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">登录次数</td>
+          </tr>
+          <tr>
+              <td class="c1">customerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">公司id</td>
+          </tr>
+          <tr>
+              <td class="c1">customername</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">公司名称</td>
+          </tr>
+          <tr>
+              <td class="c1">promotecode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广码</td>
+          </tr>
+          <tr>
+              <td class="c1">promoterid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">推广员id</td>
+          </tr>
+          <tr>
+              <td class="c1">forwarderid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">转发者id</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>55、用户账户表  （user_account）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">avatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">头像地址</td>
+          </tr>
+          <tr>
+              <td class="c1">nickname</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户昵称</td>
+          </tr>
+          <tr>
+              <td class="c1">amountCurrent</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">当前金额</td>
+          </tr>
+          <tr>
+              <td class="c1">amountBlock</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">冻结金额</td>
+          </tr>
+          <tr>
+              <td class="c1">totalAmountDebit</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">借方累计金额</td>
+          </tr>
+          <tr>
+              <td class="c1">totalAmountCredit</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">贷方累计金额</td>
+          </tr>
+          <tr>
+              <td class="c1">pointsCurrent</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">当前积分</td>
+          </tr>
+          <tr>
+              <td class="c1">pointsBlock</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">冻结积分</td>
+          </tr>
+          <tr>
+              <td class="c1">totalPointsDebit</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">借方累计积分</td>
+          </tr>
+          <tr>
+              <td class="c1">totalPointsCredit</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">贷方累计积分</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">level</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">会员级别，基于充值金额而定</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>56、用户账户记账表  （user_account_tally）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">tallydate</td>
+              <td class="c2">date</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账日期</td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">accountType</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">账户类型，1-金币，2-积分</td>
+          </tr>
+          <tr>
+              <td class="c1">tallyType</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账类型，1-借，2-贷</td>
+          </tr>
+          <tr>
+              <td class="c1">subject</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账科目</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账数</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">记账时间</td>
+          </tr>
+          <tr>
+              <td class="c1">receiptStatus</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">入账状态，1-已入账，0-未入账</td>
+          </tr>
+          <tr>
+              <td class="c1">receipttime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">入账时间</td>
+          </tr>
+          <tr>
+              <td class="c1">desc</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">描述</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>57、用户课程表（二期后弃用）  （user_course）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">cname</td>
+              <td class="c2">varchar(64)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程名</td>
+          </tr>
+          <tr>
+              <td class="c1">sn</td>
+              <td class="c2">tinyint(3)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程序号</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-有效，0-无效，2-已失效</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalpurchase</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">购买总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalview</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalshare</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">分享总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalbegiven</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">被赠送总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalvalid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">有效总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalinvalid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">无效总数</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">首次购买时间</td>
+          </tr>
+          <tr>
+              <td class="c1">expiretime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">失效时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>58、用户课程批次表（二期后弃用）  （user_course_batch）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">cname</td>
+              <td class="c2">varchar(64)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程名</td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">获取方式，1-购买，2-赠送</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，1-有效，0-无效，2-已失效</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号</td>
+          </tr>
+          <tr>
+              <td class="c1">giverid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">givername</td>
+              <td class="c2">varchar(100)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">giveravatar</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">price</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单价格</td>
+          </tr>
+          <tr>
+              <td class="c1">amount</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">总数=购买+被赠送</td>
+          </tr>
+          <tr>
+              <td class="c1">totalpurchase</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">购买总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalview</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalshare</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">分享总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalbegiven</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">被赠送总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalvalid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">有效总数</td>
+          </tr>
+          <tr>
+              <td class="c1">totalinvalid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">无效总数</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">expiretime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">失效时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>59、用户课程批次明细表（二期后弃用）  （user_course_batch_details）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">ucbid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户课程批次id</td>
+          </tr>
+          <tr>
+              <td class="c1">sn</td>
+              <td class="c2">smallint(4) unsigned</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">序号</td>
+          </tr>
+          <tr>
+              <td class="c1">rightscode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程权益码</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未使用，1-已使用，2-已失效，3-已换回</td>
+          </tr>
+          <tr>
+              <td class="c1">viewerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看用户id</td>
+          </tr>
+          <tr>
+              <td class="c1">usetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">使用时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>60、课程权益表  （user_course_rights）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">id</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">是</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">cid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程id</td>
+          </tr>
+          <tr>
+              <td class="c1">rightscode</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">课程权益码</td>
+          </tr>
+          <tr>
+              <td class="c1">status</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">状态，0-未使用，1-已使用，2-已失效，3-已换回，4-已分享，5-已领取</td>
+          </tr>
+          <tr>
+              <td class="c1">type</td>
+              <td class="c2">tinyint(1)</td>
+              <td class="c3">1</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">权益类型，1-单买，2-赠好友</td>
+          </tr>
+          <tr>
+              <td class="c1">createtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">创建时间</td>
+          </tr>
+          <tr>
+              <td class="c1">expiretime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">失效时间</td>
+          </tr>
+          <tr>
+              <td class="c1">buyerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">购买人id</td>
+          </tr>
+          <tr>
+              <td class="c1">orderno</td>
+              <td class="c2">varchar(20)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单号</td>
+          </tr>
+          <tr>
+              <td class="c1">price</td>
+              <td class="c2">decimal(10,2)</td>
+              <td class="c3">0.00</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">订单价格</td>
+          </tr>
+          <tr>
+              <td class="c1">ownerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">拥有人id</td>
+          </tr>
+          <tr>
+              <td class="c1">owntime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">拥有时间</td>
+          </tr>
+          <tr>
+              <td class="c1">viewerid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看人id</td>
+          </tr>
+          <tr>
+              <td class="c1">viewtime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">观看时间</td>
+          </tr>
+          <tr>
+              <td class="c1">sharetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">分享时间</td>
+          </tr>
+          <tr>
+              <td class="c1">receiverid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3">0</td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">领取人id</td>
+          </tr>
+          <tr>
+              <td class="c1">receivetime</td>
+              <td class="c2">datetime</td>
+              <td class="c3"></td>
+              <td class="c4">YES</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">领取时间</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>61、用户元数据表
+  （user_meta）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">uid</td>
+              <td class="c2">int(11)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">用户ID</td>
+          </tr>
+          <tr>
+              <td class="c1">name</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">名称</td>
+          </tr>
+          <tr>
+              <td class="c1">key</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键名</td>
+          </tr>
+          <tr>
+              <td class="c1">value</td>
+              <td class="c2">varchar(1024)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6">键值</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>62、微信access token  （wx_oauth_access_token）</h3>
+  <table border="1" cellspacing="0" cellpadding="0" width="100%">
+      <tbody>
+          <tr>
+              <th>字段名</th>
+              <th>数据类型</th>
+              <th>默认值</th>
+              <th>允许非空</th>
+              <th>自动递增</th>
+              <th>备注</th>
+          </tr>
+          <tr>
+              <td class="c1">openid</td>
+              <td class="c2">varchar(32)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">access_token</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">refresh_token</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">scope</td>
+              <td class="c2">varchar(255)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+          <tr>
+              <td class="c1">expires_in</td>
+              <td class="c2">mediumint(9)</td>
+              <td class="c3"></td>
+              <td class="c4">NO</td>
+              <td class="c5">&nbsp;</td>
+              <td class="c6"></td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+</body></html>

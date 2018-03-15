@@ -21,7 +21,7 @@
 Route::middleware([])->group(function(){
     
     //验证微信服务器
-    Route::get('/',"WechatController@AuthEchostr");
-    
+//    Route::get('/',"WechatController@AuthEchostr");
+    Route::get('/','HomeController@index');
     
 });

@@ -1,0 +1,49 @@
+一：项目
+  server：服务器端
+  portal：移动端前台
+  admin：运营后台
+
+二：配置环境
+  安装memcached并运行
+  安装mysql
+  安装NODE
+  安装nodemon：npm i nodemon -g
+  安装webpack：npm i webpack -g
+  安装angular/cli：npmi @angular/cli
+  
+  还原数据库：导入db文件夹下的zhbx.sql，数据库名为zhbx，编码utf8mb4
+  
+  修改server端配置：
+    src/app/configs/db.ts
+      host：数据库主机
+      database：数据库名称
+      username：数据库用户
+      password：数据库密码
+    
+    src/app/configs/mns.ts
+      accountId：阿里云ID
+      appKey：阿里云appKey
+      appSecret：阿里云appSecret
+      queues：阿里云队列，不要与生产环境的队列冲突
+      
+  安装依赖：server、portal、admin目录运行 npm i 安装项目依赖
+
+三：本地运行
+  server
+    1. npm run watch
+    2. npm run server:fs
+    3. npm run server:basic
+    4. npm run server:service
+    5. npm run server:bms-api
+    6. npm run server:wx-api
+    7. npm run server:mns01
+    8. npm run server:mns02
+    9. npm run server:schedule（本地运行可选）
+  
+  admin
+    1. npm start
+    2. 打开 http://localhost:4200/
+  
+  portal
+    1. npm start
+    2. 打开 http://localhost:4300/

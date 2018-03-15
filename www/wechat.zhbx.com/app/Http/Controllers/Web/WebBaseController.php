@@ -7,6 +7,5 @@
  class WebBaseController extends Controller{
  
  
- 
  }
  

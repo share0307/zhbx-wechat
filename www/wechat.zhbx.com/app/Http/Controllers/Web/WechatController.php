@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web;
 
+use Illuminate\Http\Request;
+
 class WechatController extends WebBaseController{
     
 
@@ -19,4 +21,13 @@ class WechatController extends WebBaseController{
     }
 
 
+    /**
+     * 微信登录回调地址
+     * @author  jianwei
+     */
+    public function OauthRedirect(Request $request)
+    {
+        var_dump($request);
+    }
+    
 }

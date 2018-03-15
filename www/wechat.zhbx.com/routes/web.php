@@ -25,3 +25,11 @@ Route::middleware(['CheckWxBrowser','CheckWxLogin',])->group(function(){
     Route::get('/','HomeController@index');
     
 });
+
+//微信相关
+Route::middleware(['CheckWxBrowser',])->prefix('wechat')->group(function() {
+    
+    //微信授权后的跳转页面
+    Route::get('/redirect','WechatController@OauthRedirect');
+});
+

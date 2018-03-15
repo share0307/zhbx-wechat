@@ -35,7 +35,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\Jsonp::class,
+//            \App\Http\Middleware\Jsonp::class,
         ],
 
         'api' => [
@@ -59,6 +59,12 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'jsonp' => \App\Http\Middleware\Jsonp::class,
+        
+        //以下为自定义的中间件
+        'Jsonp' => \App\Http\Middleware\Jsonp::class,
+        //检查是否微信浏览器
+        'CheckWxBrowser'    =>  \App\Http\Middleware\CheckWxBrowser::class,
+        //检查是否微信登录！
+        'CheckWxLogin'    =>  \App\Http\Middleware\CheckWxLogin::class,
     ];
 }

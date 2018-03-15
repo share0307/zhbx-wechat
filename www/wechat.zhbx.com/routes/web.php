@@ -18,7 +18,7 @@
 //    return view('welcome');
 //});
 
-Route::middleware([])->group(function(){
+Route::middleware(['CheckWxBrowser','CheckWxLogin',])->group(function(){
     
     //验证微信服务器
 //    Route::get('/',"WechatController@AuthEchostr");

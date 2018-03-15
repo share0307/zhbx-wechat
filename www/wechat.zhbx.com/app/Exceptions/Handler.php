@@ -48,6 +48,16 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        
+        if ($exception instanceof JsonException) {
+            //此处用于错误数据的转化
+            $err_msg = $exception->getErrorMsg();
+        
+            $response = response()->json($err_msg);
+        
+            return $response;
+        }
+        
         return parent::render($request, $exception);
     }
 }

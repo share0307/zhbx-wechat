@@ -54,7 +54,10 @@ class CheckWxLogin
             if ($e->getCode() == '30000'){
                 //跳转到登录页面
                 $oauth = app('Wechat')->oauth;
-                $oauth->scopes(['snsapi_userinfo']);
+                //需要用户授权取得详细信息
+                //$oauth->scopes(['snsapi_userinfo']);
+                //静默授权
+                $oauth->scopes(['snsapi_base']);
                 $oauth->setRequest($request);
                 return $oauth->redirect();
             }

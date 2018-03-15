@@ -58,7 +58,7 @@ class CheckWxLogin
                 //$oauth->scopes(['snsapi_userinfo']);
                 $oauth->scopes(['snsapi_base']);
                 //回调地址
-                $callback_url = action('WechatController@OauthRedirect');
+                $callback_url = action('Web\WechatController@OauthRedirect');
                 $oauth->callback($callback_url);
                 //附带的参数
                 $oauth->setRequest($request);

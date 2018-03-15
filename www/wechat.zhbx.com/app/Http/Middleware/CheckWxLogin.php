@@ -61,7 +61,13 @@ class CheckWxLogin
                 //附带的参数
                 $oauth->setRequest($request);
                 $callback_url = action('Web\WechatController@OauthRedirect');
-                return $oauth->redirect($callback_url);
+                
+                //获取当前的连接
+                $current_full_url = $request->fullUrl();
+    
+                $callback_fullurl = $callback_url . '?target_url=' . $current_full_url;
+                
+                return $oauth->redirect($callback_fullurl);
             }
     
         }

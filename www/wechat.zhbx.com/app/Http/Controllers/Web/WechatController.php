@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Http\Business\WechatOauthBusiness;
 use Illuminate\Http\Request;
 
 class WechatController extends WebBaseController{
@@ -25,9 +26,13 @@ class WechatController extends WebBaseController{
      * 微信登录回调地址
      * @author  jianwei
      */
-    public function OauthRedirect(Request $request)
+    public function OauthRedirect(Request $request, WechatOauthBusiness $wechat_oauth_business)
     {
-        var_dump($request->input());
+        $target_url = $request->get('target_url',action('/'));
+    
+        $wechat_oauth_business->getWeixinUserInfo();
+        
+        return redirect($target_url);
     }
     
 }

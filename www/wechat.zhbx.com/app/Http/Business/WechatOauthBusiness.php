@@ -36,4 +36,20 @@ class WechatOauthBusiness extends BusinessBase{
     }
     
     
+    /**
+     * 授权登录后，获取微信用户数据
+     * @author  jianwei
+     */
+    public function getWeixinUserInfo()
+    {
+        $Wechat = app('Wechat');
+        $oauth = $Wechat->oauth;
+    
+        $wx_user = $oauth->user();
+        
+        var_dump($wx_user);
+        exit();
+    }
+    
+    
 }

@@ -72,7 +72,6 @@ class CheckWxLogin
     
         }
         
-        
         return null;
     }
     

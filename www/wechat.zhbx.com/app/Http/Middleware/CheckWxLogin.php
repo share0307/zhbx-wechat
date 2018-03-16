@@ -34,15 +34,16 @@ class CheckWxLogin
         }catch (JsonException $e){
             try{
                 $this->checkWechatIsLogin();
-            }catch (JsonException $e){
+            }catch (JsonException $e) {
                 if ($e->getCode() == '30000') {
                     //检查是否微信登录
-                    $check = $this->wechat_oauth_business->WechatOauthLogin($request,'snsapi_base');
-    
+                    $check = $this->wechat_oauth_business->WechatOauthLogin($request, 'snsapi_base');
+        
                     if ($check instanceof RedirectResponse) {
                         return $check;
                     }
                 }
+            }
         }
         
         $return_data = $next($request);

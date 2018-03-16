@@ -29,11 +29,20 @@ class CheckWxLogin
      */
     public function handle($request, Closure $next)
     {
-        //检查是否微信登录
-        $check = $this->checkWechatLogin($request);
-
-        if ($check instanceof RedirectResponse) {
-            return $check;
+        try {
+            $this->wechat_oauth_business->checkWechatIsLogin();
+        }catch (JsonException $e){
+            try{
+                $this->checkWechatIsLogin();
+            }catch (JsonException $e){
+                if ($e->getCode() == '30000') {
+                    //检查是否微信登录
+                    $check = $this->wechat_oauth_business->WechatOauthLogin($request,'snsapi_base');
+    
+                    if ($check instanceof RedirectResponse) {
+                        return $check;
+                    }
+                }
         }
         
         $return_data = $next($request);
@@ -41,37 +50,5 @@ class CheckWxLogin
         return $return_data;
     }
     
-    /**
-     * 检查是否已经微信登录的业务
-     * @author  jianwei
-     */
-    private function checkWechatLogin($request)
-    {
-        try{
-            $this->wechat_oauth_business->checkWechatLogin();
-            var_dump('已经登录了！');
-        }catch (JsonException $e){
-            if ($e->getCode() == '30000'){
-                //跳转到登录页面
-                $oauth = app('Wechat')->oauth;
-                //需要用户授权取得详细信息
-                $oauth->scopes(['snsapi_userinfo']);
-//                $oauth->scopes(['snsapi_base']);
-                //回调地址
-                //附带的参数
-                $oauth->setRequest($request);
-                $callback_url = action('Web\WechatController@OauthRedirect');
-                
-                //获取当前的连接
-                $current_full_url = $request->fullUrl();
-    
-                $callback_fullurl = $callback_url . '?target_url=' . $current_full_url;
-                
-                return $oauth->redirect($callback_fullurl);
-            }
-        }
-        
-        return null;
-    }
     
 }

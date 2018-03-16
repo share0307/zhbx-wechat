@@ -5,7 +5,7 @@ namespace App\Http\Business;
 use App\Exceptions\JsonException;
 use App\Http\Business\Dao\UsersDao;
 
-class UserBusiness extends BusinessBase{
+class UsersBusiness extends BusinessBase{
     
     //用户模型
     protected $users_dao = null;
@@ -42,6 +42,22 @@ class UserBusiness extends BusinessBase{
         }
         
         return $user_details;
+    }
+    
+    
+    
+    /**
+     * 通过 openid 获取会员详细信息
+     * @author  jianwei
+     * @param
+     */
+    public function GetUserInfoByOpenId($openid)
+    {
+        if(empty($openid)){
+            throw new JsonException(10000);
+        }
+        
+        return $this->users_dao->GetUserInfo($openid);
     }
     
 }

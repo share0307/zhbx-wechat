@@ -21,7 +21,7 @@ class WechatOauthBusiness extends BusinessBase{
      * 检查微信是否登录
      * @author  jianwei
      */
-    public function checkWechatLogin()
+    public function checkWechatIsLogin()
     {
         //从 session 中判断用户是否登录
         $user_id = session('user_id');
@@ -63,5 +63,30 @@ class WechatOauthBusiness extends BusinessBase{
         return $wx_user_arr;
     }
     
+    
+    /**
+     * 检查是否已经微信登录的业务
+     * @author  jianwei
+     */
+    public function WechatOauthLogin($request,$scopes,$fullurl = '')
+    {
+        //跳转到登录页面
+        $oauth = app('Wechat')->oauth;
+        //需要用户授权取得详细信息
+//        $oauth->scopes(['snsapi_userinfo']);
+//        $oauth->scopes(['snsapi_base']);
+        $oauth->scopes([$scopes]);
+        //回调地址
+        //附带的参数
+        $oauth->setRequest($request);
+        $callback_url = action('Web\WechatController@OauthRedirect');
+        
+        //获取当前的连接
+        $current_full_url = !empty($fullurl) ? $fullurl : $request->fullUrl();
+        
+        $callback_fullurl = $callback_url . '?target_url=' . $current_full_url;
+        
+        return $oauth->redirect($callback_fullurl);
+    }
     
 }

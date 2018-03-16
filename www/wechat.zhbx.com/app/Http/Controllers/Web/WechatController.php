@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Exceptions\JsonException;
+use App\Http\Business\UsersBusiness;
 use App\Http\Business\WechatOauthBusiness;
 use Illuminate\Http\Request;
 
@@ -26,14 +28,33 @@ class WechatController extends WebBaseController{
      * 微信登录回调地址
      * @author  jianwei
      */
-    public function OauthRedirect(Request $request, WechatOauthBusiness $wechat_oauth_business)
+    public function OauthRedirect(Request $request, WechatOauthBusiness $wechat_oauth_business, UsersBusiness $users_business)
     {
         $target_url = $request->get('target_url',url('/'));
     
         $code = $request->get('code');
         
+        //从微信服务器获取用户信息
         $wechat_user_data = $wechat_oauth_business->getWeixinUserInfo($code);
-    
+        
+        //获取 openid
+        $openid = $wechat_user_data['id'];
+        
+        try {
+            //检查用户是否存在
+            $users_business->GetUserInfoByOpenId($openid);
+            
+            //跳转到最后
+            goto redirect;
+        }catch (JsonException $e){
+            if($e->getCode() != 30001){
+                //直接返回首页吧
+                return redirect('/');
+            }else if($e->getCode() == 30001){
+                //跳转跳转到用户授权的页面，再次授权
+                return $wechat_oauth_business->WechatOauthLogin($request,'snsapi_userinfo',$target_url);
+            }
+        }
         
         $wx_user_info = array();
         $wx_user_info['openid'] = $wechat_user_data['id'];
@@ -51,6 +72,10 @@ class WechatController extends WebBaseController{
         
         //同步用户数据
         dd($wx_user_info);
+        
+        redirect:
+        //把用户信息写入 session，然后跳转
+        
         
         return redirect($target_url);
     }

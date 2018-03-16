@@ -33,7 +33,7 @@ class CheckWxLogin
             $this->wechat_oauth_business->checkWechatIsLogin();
         }catch (JsonException $e){
             try{
-                $this->checkWechatIsLogin();
+                $this->wechat_oauth_business->checkWechatIsLogin();
             }catch (JsonException $e) {
                 if ($e->getCode() == '30000') {
                     //检查是否微信登录

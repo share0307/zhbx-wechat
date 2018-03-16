@@ -27,7 +27,7 @@ class ModelServiceProvider extends ServiceProvider
     public function register()
     {
         // 用户模型
-        $this->app->bind('UsersModel',\App\Model\Users::class);
+        $this->app->bind('UsersModel',\App\Http\Model\Users::class);
     }
     
     /**

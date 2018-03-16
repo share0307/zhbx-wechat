@@ -36,7 +36,7 @@ class WechatController extends WebBaseController{
         
         //从微信服务器获取用户信息
         $wechat_user_data = $wechat_oauth_business->getWeixinUserInfo($code);
-        
+        var_dump($wechat_user_data);
         //获取 openid
         $openid = $wechat_user_data['id'];
         

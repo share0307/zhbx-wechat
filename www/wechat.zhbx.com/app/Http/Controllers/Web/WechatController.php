@@ -36,7 +36,7 @@ class WechatController extends WebBaseController{
         
         //从微信服务器获取用户信息
         $wechat_user_data = $wechat_oauth_business->getWeixinUserInfo($code);
-        var_dump($wechat_user_data);
+
         //获取 openid
         $openid = $wechat_user_data['id'];
         
@@ -50,7 +50,7 @@ class WechatController extends WebBaseController{
             if($e->getCode() != 30001){
                 //直接返回首页吧
                 return redirect('/');
-            }else if($e->getCode() == 30001){
+            }else if($e->getCode() == 30001 && isset($wechat_user_data['nickname'])){
                 //跳转跳转到用户授权的页面，再次授权
                 return $wechat_oauth_business->WechatOauthLogin($request,'snsapi_userinfo',$target_url);
             }

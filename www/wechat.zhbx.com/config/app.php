@@ -162,6 +162,8 @@ return [
 
         //微信服务提供者
         App\Providers\WechatServiceProvider::class,
+        //模型
+        App\Providers\ModelServiceProvider::class,
         
     ],
 

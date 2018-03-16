@@ -72,7 +72,7 @@ class WechatController extends WebBaseController{
             $wx_user_info['headimgurl'] = $wechat_user_data['original']['headimgurl'];
         }
         
-        同步用户数据
+//        同步用户数据
         dd($wx_user_info);
         
         redirect:

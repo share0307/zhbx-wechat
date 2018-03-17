@@ -73,7 +73,11 @@ class WechatController extends WebBaseController{
         }
         
 //        同步用户数据
-        dd($wx_user_info);
+//        dd($wx_user_info);
+        
+        //把数据插入到数据库
+        $users_business->CreateUser($wx_user_info);
+        
         
         redirect:
         //把用户信息写入 session，然后跳转

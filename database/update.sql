@@ -20,3 +20,26 @@ alter table user add column `deleted_at` timestamp NULL DEFAULT NULL COMMENT '�
 
 # 为 user 表增加 openid 字段
 alter table user add column `openid` varchar(32) NOT NULL DEFAULT '' COMMENT '微信 openid';
+
+#为 user 表增加 unionid 字段
+alter table user add column `unionid` varchar(50) NOT NULL DEFAULT '' COMMENT '微信 unionid';
+
+#为 user 表增加 sex 字段
+alter table user add column `sex` tinyint(4) NOT NULL DEFAULT 0 COMMENT '微信性别';
+
+#为 user 表增加 language 字段
+alter table user add column `language` varchar(10) NOT NULL DEFAULT '' COMMENT '微信language';
+
+#为 user 表增加 country 字段
+alter table user add column `country` varchar(20) NOT NULL DEFAULT '' COMMENT '微信 country';
+
+#为 user 表增加 province 字段
+alter table user add column `province` varchar(20) NOT NULL DEFAULT '' COMMENT '微信 province';
+
+#为 user 表增加 city 字段
+alter table user add column `city` varchar(20) NOT NULL DEFAULT '' COMMENT '微信 city';
+
+#删除 user 表中的 wxid
+alter table user drop column wxid ;
+
+

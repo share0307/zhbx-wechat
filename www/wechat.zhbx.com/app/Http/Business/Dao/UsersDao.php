@@ -14,23 +14,19 @@ class UsersDao extends DaoBase{
     public function SaveUserInfo(array $user_data)
     {
         $rules = [
-            'subscribe'            => 'required',
-            'sex'                  => '',
-//            'subscribe_time'       => '',
-//            'unsubscribed_time'    => '',
-            'openid'               => 'required',
-//            'unionid'              => '',
-            'source'               => 'required',
-            'nickname'             => '',
-            'headimgurl'           => '',
+            'openid'    =>  ['required',],
+            'nickname'  =>  ['required',],
+            'avatar'  =>  ['required',],
+            'email'  =>  [],
+            'sex'  =>  [],
+            'sex'  =>  [],
         ];
     
-        $message = [
-//            'subscribe.required'            => '是否订阅不能为空',
-            'openid.required'               => 'openid不能为空',
-            'source.required'               => '来源不能为空',
-            'area.required'                 => '区域不能为空',
-        ];
+        $message = array();
+//        $message = [
+////            'subscribe.required'            => '是否订阅不能为空',
+//            'openid.required'               => 'openid不能为空',
+//        ];
     
         $validate = app('validator')->make($user_data, $rules, $message);
         

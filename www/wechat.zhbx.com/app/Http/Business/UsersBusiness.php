@@ -25,23 +25,38 @@ class UsersBusiness extends BusinessBase{
      * @author  jianwei
      * @param $user_data    array   用户数据，暂时为从微信总获取的用户数据
      */
-    function SyncUserInfoToDb(array $user_data)
+//    function SyncUserInfoToDb(array $user_data)
+//    {
+//        if(!isset($user_data['id'])){
+//            throw new JsonException(10000);
+//        }
+//
+//        //先通过 openid 查找此 openid 用户是否已经存在
+//        //存在则更新，不存在则创建！
+//        try{
+//            $user_details = $this->users_dao->GetUserInfo($user_data['openid']);
+//            //更新数据
+//        }catch (JsonException $e){
+//            //插入数据
+//            $this->users_dao->SaveUserInfo($user_data);
+//        }
+//
+//        return $user_details;
+//    }
+    
+    
+    /**
+     * 新增用户数据
+     * @author  jianwei
+     * @param $user_data    array   用户数据
+     */
+    public function CreateUser(array $user_data)
     {
-        if(!isset($user_data['id'])){
+        if(!isset($user_info['openid'])){
             throw new JsonException(10000);
         }
         
-        //先通过 openid 查找此 openid 用户是否已经存在
-        //存在则更新，不存在则创建！
-        try{
-            $user_details = $this->users_dao->GetUserInfo($user_data['openid']);
-            //更新数据
-        }catch (JsonException $e){
-            //插入数据
-            $this->users_dao->SaveUserInfo($user_data);
-        }
-        
-        return $user_details;
+        return $this->users_dao->SaveUserInfo($user_data);
     }
     
     
